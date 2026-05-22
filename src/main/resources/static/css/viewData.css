@@ -1,0 +1,115 @@
+body {
+    background: #f4f6f9;
+    font-family: Arial;
+}
+
+/* 🔹 Dashboard Cards */
+.dashboard-card {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+}
+
+.card1 { background: #3498db; }
+.card2 { background: #2ecc71; }
+.card3 { background: #9b59b6; }
+
+/* 🔹 Heading */
+.heading {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* 🔹 Table Container */
+.table-container {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+    overflow-x: auto;
+}
+
+/* 🔹 Table */
+table {
+    width: 100%;
+	background-color: #4facfe;
+}
+
+/* 🔹 Header */
+thead th {
+    position: sticky;
+    top: 0;
+    background: #4facfe;
+    color: white;
+	border-radius: 10px;
+	
+}
+
+/* 🔹 Data Visibility Fix */
+tbody td {
+    color: #2c3e50;
+	background: #4facfe;
+    font-weight: 500;
+	padding-bottom: 10px;
+}
+
+tbody td:hover{
+	background: rgb(128, 128, 255);
+}
+/* 🔹 Alternate Rows */
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+	padding-top: 10px;
+}
+
+/* 🔹 Hover */
+tbody tr:hover {
+    background-color: #eaf4ff;
+}
+
+/* 🔹 Status */
+td:nth-child(9) {
+    font-weight: bold;
+}
+
+/* 🔹 Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 8px;
+}
+
+.page-btn {
+    padding: 6px 12px;
+    border: 1px solid #4facfe;
+    background: white;
+    color: #4facfe;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-btn:hover {
+    background: #4facfe;
+    color: white;
+}
+
+.page-active {
+    background: #4facfe;
+    color: white;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 20px;
+    }
+
+    th, td {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Register Page</title>
+    <meta charset="UTF-8">
+	<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link th:href="@{/css/register.css}" rel="stylesheet"/>
+	<link rel="stylesheet" th:href="@{/css/home.css}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar-wrapper">
+    <div th:replace="~{home :: navbar-fragment}"></div>
+</div>
+
+
+<div class="register-container">
+
+    <p th:if="${msg}" th:text="${msg}" class="success-msg"></p>
+
+    <h2 class="heading">Student Registration Form</h2>
+
+    <form th:action="@{/register/save}" th:object="${std}" method="post">
+
+        <label>Full Name</label>
+        <input type="text" th:field="*{name}" placeholder="Enter full name"/>
+
+        <label>Email</label>
+        <input type="email" th:field="*{email}" placeholder="Enter email"/>
+
+        <label>Phone No</label>
+        <input type="text" th:field="*{phone}" placeholder="Enter phone"/>
+
+        <label>Address</label>
+        <input type="text" th:field="*{address}" placeholder="Enter address"/>
+
+        <label>Course Name</label>
+        <input type="text" th:field="*{course}"/>
+
+        <label>Department Name</label>
+        <input type="text" th:field="*{department}"/>
+
+        <label>Year</label>
+        <input type="number" th:field="*{year}"/>
+
+        <label>Percentage</label>
+        <input type="number" step="0.01" th:field="*{percentage}"/>
+
+		<select th:field="*{gender}">
+		    <option value="">Select Gender</option>
+		    <option value="Male">Male</option>
+		    <option value="Female">Female</option>
+		</select>
+
+        <label>Date Of Birth</label>
+        <input type="date" th:field="*{dateOfBirth}"/>
+
+        <label>Registration Date</label>
+        <input type="date" th:field="*{registrationDate}"/>
+
+		<select th:field="*{status}">
+		    <option value="Active">Active</option>
+		    <option value="Inactive">Inactive</option>
+		</select>
+
+        <button type="submit">Register Student</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
